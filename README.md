@@ -1,4 +1,6 @@
 # 3b.CREATION FOR CHAT USING TCP SOCKETS
+### NAME: SAIGURUCHANDRAN
+### REG NO: 212223240143
 ## AIM
 To write a python program for creating Chat using TCP Sockets Links.
 ## ALGORITHM:
@@ -8,18 +10,7 @@ To write a python program for creating Chat using TCP Sockets Links.
  server
 4. Send and receive the message using the send function in socket.
 ## PROGRAM
-### Server Side
-```
-import socket
-s=socket.socket()
-s.bind(('localhost',90))
-s.listen(5)
-c,addr=s.accept()
-while True:
- ClientMessage=c.recv(1024).decode()
- c.send(ClientMessage.encode())
-```
-### Client Side
+### CLIENT
 ```
 
 import socket
@@ -30,8 +21,24 @@ while True:
  s.send(msg.encode())
  print("Server > ",s.recv(1024).decode())
 ```
+### SERVER
+```
+import socket
+s=socket.socket()
+s.bind(('localhost',90))
+s.listen(5)
+c,addr=s.accept()
+while True:
+ ClientMessage=c.recv(1024).decode()
+ c.send(ClientMessage.encode())
+```
+
 ## OUTPUT
-![Echo Client and Server using TCP Sockets](https://github.com/Aakashraj04/3a.Sockets_Creation_for_Echo_Client_and_Echo_Server/assets/121117266/f4e589ec-f630-44a7-8392-cfeb331f28e3)
+### CLIENT
+![WhatsApp Image 2024-05-06 at 14 23 26_21cb8436](https://github.com/Saiguruchandran/3b_CHAT_USING_TCP_SOCKETS/assets/144870946/e70d7169-42a3-4cc2-902b-d1198237dbd8)
+
+### SERVER
+![WhatsApp Image 2024-05-06 at 14 23 42_2eb3f7c8](https://github.com/Saiguruchandran/3b_CHAT_USING_TCP_SOCKETS/assets/144870946/fb817644-9b50-497d-82e3-774dc76e4761)
 
 ## RESULT
 Thus, the python program for creating Chat using TCP Sockets Links was successfully 
